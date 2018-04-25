@@ -1,5 +1,5 @@
 {
-  "name": "Re-Stack",
+  "name": "ReStack",
   "version": "0.0.1",
   "description": "MySQL + Express + Preact?",
   "main": "server.js",
