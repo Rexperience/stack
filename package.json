@@ -1,0 +1,10 @@
+{
+  "name": "Re-Stack",
+  "version": "0.0.1",
+  "description": "MySQL + Express + Preact?",
+  "main": "index.js",
+  "repository": "https://github.com/Rexperience/stack.git",
+  "author": "Rexperience <findmeanyway@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
