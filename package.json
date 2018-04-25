@@ -2,11 +2,14 @@
   "name": "Re-Stack",
   "version": "0.0.1",
   "description": "MySQL + Express + Preact?",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/Rexperience/stack.git",
   "author": "Rexperience <findmeanyway@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev" : "nodemon server.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "compression": "^1.7.2",
@@ -19,6 +22,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
+    "eslint": "^4.19.1",
     "nodemon": "^1.17.3"
   }
 }
