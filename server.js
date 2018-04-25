@@ -41,25 +41,19 @@ app.post('/create', (req, res) => {
     database.query(q, (err, result) => {
         if (err) throw err
         console.debug('Post Created!')
+        res.send(JSON.stringify(result))
     })
 })
 
-// app.get('/show', (req, res) => {
-//     let q = 'show tables;'
-//     database.query(q, (err, result) => {
-//         if (err) throw err
-//         console.debug('Tables accesed with no error.')
-//         res.send(JSON.stringify(result))
-//     })
-// })
-
-app.get('/post', (req, rest) => {
-    let q = 'select * from post;'
+app.get('/post', (req, res) => {
+    let q = 'select * from post'
     database.query(q, (err, result) => {
         if(err) throw err
         console.log('Post fetched')
+        res.send(JSON.stringify(result))
     })
 })
+
 
 app.listen(port, () => {
     console.log(`server is running on ${port} . . .`)
