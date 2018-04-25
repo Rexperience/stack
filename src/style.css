@@ -1,6 +1,11 @@
+html, body {
+    margin: 0 auto;
+}
+
 .main {
     padding: 20%;
     height: 100vh;
+    background-image: url('./main_bg.min.jpg');
 }
 
 .is-centered {
