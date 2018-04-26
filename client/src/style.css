@@ -1,0 +1,18 @@
+* {
+	margin: 0 auto;
+}
+
+html, body {
+	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+}
+
+h1 {
+	text-align: center;
+}
+
+.full {
+	min-height: 10vh;
+	background-color: #ecf0f1;
+	color: #191919;
+}

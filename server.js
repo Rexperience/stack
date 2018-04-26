@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/create', (req, res) => {
-    let q = 'insert into post (_title, _post) values ("This is title", "Lorem ipsum dolot sit amet");'
+    let q = 'insert into post (_title, _post) values (${title},${post} );'
     database.query(q, (err, result) => {
         if (err) throw err
         console.debug('Post Created!')
