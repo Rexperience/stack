@@ -5,12 +5,17 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const helmet = require('helmet')
 const mysql = require('mysql2')
+const chalk = require('chalk')
 const cors = require('cors')
 
 const app = express()
 const router = express.Router()
 
-app.use(morgan('combined'))
+app.use(morgan(function (tokens, req, res) {
+    return chalk.blue(tokens.method(req, res))
+      + ' ' + chalk.green(tokens.url(req, res))
+      + ' ' + chalk.red(tokens['response-time'](req, res))
+  }))
 app.use(bodyParser.json())
 app.use(compression())
 app.use(helmet())
