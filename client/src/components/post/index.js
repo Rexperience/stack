@@ -1,4 +1,4 @@
-import { Component } from "preact";
+import { Component } from 'preact';
 const axios = require('axios');
 
 export default class Post extends Component {
@@ -15,11 +15,15 @@ export default class Post extends Component {
 
     render() {
         return (
-            <ul>
-                {this.state.post.map(post => 
-                    <li key={post._id}> {post._post}</li>
-                )}
-            </ul>
+            <div class="posts">
+                {this.state.post.map(post => (
+                    <div class={post._id} key={post._id}>
+                        <h2>{post._title}</h2>
+                        <p>{post._post}</p>
+                        <h6>{post._time}</h6>
+                    </div>
+                ))}
+            </div>
         );
     }
 }
